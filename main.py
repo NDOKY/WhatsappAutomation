@@ -2,13 +2,27 @@
 
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
+from time import strftime
 
 import pywhatkit as kit
+import datetime
+from pyxlsb import convert_date
 
-#kit.add_driver_path('chromedriver.exe')
-x = 19
-#kit.load_QRcode()
-while x <= 30:
-    kit.sendwhatmsg('+237698806036', 'je teste quelque chose', 12, x)
-    x = x+1
+tempsMinute = datetime.datetime.now().minute +1
+tempsHeures = datetime.datetime.now().hour
+
+print(tempsMinute)
+
+heureEnvoi = 4
+minuteEnvoi = 4
+
+#while tempsMinute <= minuteEnvoi and tempsHeures <= heureEnvoi:
+while tempsMinute != 60:
+    kit.sendwhatmsg('+237699130619', 'hahahahahahahahaha', heureEnvoi, tempsMinute)
+    tempsMinute = tempsMinute + 1
+
+
+#incrementer les secondes
+# if tempsMinute == 60:
+#        tempsHeures = tempsHeures + 1
+#    tempsMinute = tempsMinute + 1
